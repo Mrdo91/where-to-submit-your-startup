@@ -329,4 +329,14 @@ exclude = [
   # request too, browser user agent included, while it loaded normally in the batch's browser that morning, when we signed up and
   # reached its Add Company form.
   '^https://www\.owler\.com/',
+  # 2026-10-14: AIStage (an existing row) answered GitHub's runners with 403 on the scheduled link check of 2026-10-12, on both link checks
+  # of PR #103, and on the first check of PR #105. Every request from here, browser user agent included and the homepage too, gets
+  # Cloudflare's "Attention Required!" block page and 403. Its row was last checked on 2026-10-04, when the site loaded; it hasn't been
+  # opened in a browser since. This does not mean the site is healthy.
+  '^https://aistage\.net/',
+  # 2026-10-14: intentionally linked under Reported submission problems (PR #105). Topio Networks answered GitHub's runners with 403 on
+  # the first link check of PR #105, and from here every request, browser user agent included, gets Cloudflare's "Just a moment..."
+  # page and 403. The owner session's browser loaded it that morning: the domain now serves an online casino affiliate page. This does
+  # not mean the site is healthy.
+  '^https://(www\.)?topionetworks\.com/',
 ]
