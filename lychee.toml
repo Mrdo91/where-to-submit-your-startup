@@ -339,4 +339,10 @@ exclude = [
   # page and 403. The owner session's browser loaded it that morning: the domain now serves an online casino affiliate page. This does
   # not mean the site is healthy.
   '^https://(www\.)?topionetworks\.com/',
+  # 2026-10-14, temporary: EarlyHunt and MakerHunt (existing rows) both answered 503 on both link checks of PR #106. From here, and in
+  # the SubmitMyStartup browser, both /submit pages show only "no available server" (the same host, with nothing behind it). Both
+  # loaded when we tried them on 2026-10-04. Recheck on 2026-10-21: if they are still down, their rows move to Reported submission
+  # problems as dead and these lines go; if they are back, these lines go. This does not mean the sites are healthy.
+  '^https://earlyhunt\.com/',
+  '^https://makerhunt\.io/',
 ]
