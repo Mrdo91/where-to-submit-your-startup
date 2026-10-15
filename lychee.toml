@@ -346,8 +346,8 @@ exclude = [
   '^https://earlyhunt\.com/',
   '^https://makerhunt\.io/',
   # 2026-10-15: intentionally linked under Reported submission problems (found dead 2026-10-14); connection refused from CI and from Sydney.
-  '^https://unboxingstartups.com/',
+  '^https://unboxingstartups\.com/',
   # 2026-10-15: the submit page redirects to itself (301 to the same URL), from CI and from Sydney. Recheck on 2026-10-22: if it still loops, the
   # row moves to Reported submission problems and this line goes; if it loads, this line goes. This does not mean the site is healthy.
-  '^https://theaisurf.com/submit-listing/$',
+  '^https://theaisurf\.com/submit-listing/$',
 ]
