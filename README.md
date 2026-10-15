@@ -4,7 +4,15 @@
 
 An open-source library of places to submit your startup. It's the most comprehensive list of its kind I've found.
 
-To filter the list, plan a launch, or ask an AI assistant where to submit, use [submitmystartup.com](https://submitmystartup.com/) (planner and MCP server).
+To filter the list or plan a launch, use the planner at [submitmystartup.com](https://submitmystartup.com/).
+
+**Ask your AI agent where to launch.** The list is also a skill for Claude Code, Codex, Cursor, and other agents:
+
+```sh
+npx skills add mmmmingos/where-to-submit-your-startup
+```
+
+In Claude Code it is also a plugin, with the MCP server included: `/plugin marketplace add mmmmingos/where-to-submit-your-startup`, then `/plugin install where-to-submit-your-startup@submitmystartup`. In Claude, ChatGPT, and other chat apps, add the free MCP server instead ([setup](https://submitmystartup.com/mcp-server/)). The skill and the server read this list through submitmystartup.com's read-only API, with no account or key.
 
 **Jump to:** [Directories](#directories--submission-services) · [Only for some startups](#only-for-some-startups) · [Reddit](#reddit-communities) · [Problems](#reported-submission-problems) · [Contribute](#contribute)
 
