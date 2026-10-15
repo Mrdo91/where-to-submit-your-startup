@@ -1,0 +1,14 @@
+{
+  "name": "submitmystartup",
+  "owner": { "name": "mmmmingos", "url": "https://github.com/mmmmingos" },
+  "metadata": {
+    "description": "Where to Submit Your Startup: a skill and an MCP connector for choosing places to submit or launch a startup."
+  },
+  "plugins": [
+    {
+      "name": "where-to-submit-your-startup",
+      "source": "./plugin",
+      "description": "Pick places to submit or launch a startup from a free, kept-fresh list where most places were tried by submitting to them."
+    }
+  ]
+}

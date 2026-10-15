@@ -5,6 +5,8 @@ on:
     branches: [main]
     paths:
       - README.md
+      - plugin/**
+      - .claude-plugin/**
       - .github/workflows/publish-directory.yml
   workflow_dispatch:
 
