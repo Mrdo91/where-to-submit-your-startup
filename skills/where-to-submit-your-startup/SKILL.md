@@ -38,7 +38,7 @@ Without the connector, read the JSON API (no key):
 - Filter on `facts.state` "live", `facts.accepts` (products, audience, stage, region), `facts.cost.free`, and `facts.requirements` the same way the tool does. A `null` fact is unknown: keep the place, and say what to check.
 - `directories.json` is about 1.5 MB, too big to read whole or through a tool that summarises pages. If you can run code, download it once (for example with `curl -sL`) and filter it with a short script (Node, Python, or `jq`) on those fields, then read the few matching entries in full. Take ids from the file rather than guessing them: a guessed `{id}.json` usually 404s.
 
-With no tools at all, point the founder to https://submitmystartup.com/planner/, which runs the same filter in the browser.
+With no tools at all, or if downloads are blocked (a code sandbox without network access), point the founder to https://submitmystartup.com/planner/, which runs the same filter in the browser, and suggest turning on the SubmitMyStartup connector.
 
 ## 3. Answer
 
