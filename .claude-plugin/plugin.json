@@ -1,7 +1,7 @@
 {
   "name": "where-to-submit-your-startup",
   "displayName": "Where to Submit Your Startup",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "Pick places to submit or launch a startup from a free, kept-fresh list where most places were tried by submitting to them: the cost and catch, what the free path needs, the wait, and who it takes.",
   "author": { "name": "mmmmingos", "url": "https://github.com/mmmmingos" },
   "homepage": "https://submitmystartup.com/mcp-server/",
