@@ -363,4 +363,7 @@ exclude = [
   '^https://indiefol\.io/pricing$',
   '^https://profithunt\.co/',
   '^https://thatsmy\.ai/submit-tool$',
+  # 2026-10-19: CI gets Cloudflare 522 from AI138's submit page on all three link checks of PR #124, while a request from Sydney gets 200.
+  # Recheck periodically.
+  '^https://www\.ai138\.com/submit$',
 ]
