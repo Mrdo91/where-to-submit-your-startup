@@ -355,14 +355,15 @@ exclude = [
   '^https://where2go\.com/binn/su\.w2g',
   # 2026-10-15: CI gets 521 then 403 from SaaSList while a request from Sydney gets 200 (a bot wall, as with Betabound). Recheck periodically.
   '^https://saaslist\.com/$',
-  # 2026-10-19, temporary: these existing rows failed both link checks of PR #124 and failed the same way from Sydney: AIBestTop's submit
-  # page (Cloudflare 523, origin unreachable), Indie Folio's pricing page (503), ProfitHunt (TLS: unrecognised name) and ThatsMy.ai's
-  # submit page (502). Recheck on 2026-10-23: a site still down moves to Reported submission problems as dead and its line goes; a site
-  # that is back loses its line. This does not mean the sites are healthy.
+  # 2026-10-19, temporary: these existing rows failed at least two link checks of PR #124 and failed the same way from Sydney: AIBestTop's
+  # submit page (Cloudflare 523, origin unreachable), Indie Folio's pricing page (503), ProfitHunt (TLS: unrecognised name), ThatsMy.ai's
+  # submit page (502) and AI Tools Up (timeouts). Recheck on 2026-10-23: a site still down moves to Reported submission problems as dead
+  # and its line goes; a site that is back loses its line. This does not mean the sites are healthy.
   '^https://aibesttop\.com/',
   '^https://indiefol\.io/pricing$',
   '^https://profithunt\.co/',
   '^https://thatsmy\.ai/submit-tool$',
+  '^https://aitoolsup\.com/',
   # 2026-10-19: CI gets Cloudflare 522 from AI138's submit page on all three link checks of PR #124, while a request from Sydney gets 200.
   # Recheck periodically.
   '^https://www\.ai138\.com/submit$',
