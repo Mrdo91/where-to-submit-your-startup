@@ -2,7 +2,7 @@
 
 [![Link checks](https://github.com/mmmmingos/where-to-submit-your-startup/actions/workflows/links.yml/badge.svg)](https://github.com/mmmmingos/where-to-submit-your-startup/actions/workflows/links.yml)
 
-An open-source library of places to submit your startup. It's the most comprehensive list of its kind I've found.
+An open-source library of places to submit your startup. It's the most up-to-date and most comprehensive list of its kind.
 
 To filter the list or plan a launch, use the planner at [submitmystartup.com](https://submitmystartup.com/).
 
