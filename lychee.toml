@@ -336,4 +336,10 @@ exclude = [
   # in a browser on 2026-10-24. Recheck on 2026-10-31: still down, its row moves to Reported submission problems and this
   # line becomes a Reported one; back, this line goes. This does not mean the site is healthy.
   '^https://www\.promoteproject\.com/',
+  # 2026-10-24: these fail from GitHub's runners while answering 200 from Sydney, to a browser user agent and a non-browser one: LibHunt's
+  # submit page answered 403 and Insidr's submit page timed out on two link checks each (PRs #127 and #130), and ProfitHunt failed the TLS
+  # handshake on the link check on main after its temporary exclusion was removed. Recheck periodically. This does not mean the sites are healthy.
+  '^https://www\.libhunt\.com/repo/submit$',
+  '^https://www\.insidr\.ai/submit-tools/$',
+  '^https://profithunt\.co/',
 ]
