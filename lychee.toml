@@ -221,12 +221,6 @@ exclude = [
   '^https://gpte\.ai/',
   '^https://thewarehouse\.ai/',
   '^https://toolsummary\.com/',
-  # 2026-10-08: TEMPORARY. SideHunt (an existing row) failed both link checks of PR #96: it serves Traefik's self-signed
-  # "TRAEFIK DEFAULT CERT" and HTTP 503 ("no available server"), from here as well as from GitHub's runners: an outage on
-  # the server it shares with Uno Directory, not a CI block. Excluded so unrelated PRs can merge. Recheck 2026-10-09: remove
-  # this line when the site answers, or move its row to Reported submission problems if it is still down. This does not mean
-  # the site is healthy.
-  '^https://sidehunt\.io/',
   # 2026-10-08: AI Agents Verse and AIChief answered GitHub's runners with Cloudflare's "Just a moment..." page and 403, and AI Just
   # Better with Vercel's checkpoint and 429, on the first link check of PR #97, as they do to non-browser requests from here, while
   # all three loaded normally in a browser the same night, when we submitted to AI Agents Verse and AI Just Better and read AIChief's plans.
@@ -245,11 +239,6 @@ exclude = [
   '^https://heyaiworld\.com/',
   '^https://www\.aeotools\.space/',
   '^https://www\.toolwave\.io/',
-  # 2026-10-08: TEMPORARY. Index by Dodo Payments (an existing row) answered both link checks of PR #97 with Vercel's security
-  # checkpoint and 429, homepage included, as it does to non-browser requests from here, though it passed the link check on main
-  # at 18:12 UTC the same day (dodopayments.com itself answers 200). A new bot check, not a removed site; excluded so unrelated PRs
-  # can merge. Recheck 2026-10-09: remove this line when lychee gets a clean 2xx. This does not mean the site is healthy.
-  '^https://index\.dodopayments\.com/',
   # 2026-10-08: AI Search answered GitHub's runners with Vercel's checkpoint and 429 on the first link check of PR #98, as it does to
   # non-browser requests from here (and to curl with a browser user agent), while it loaded normally in a browser the same night,
   # when we read its submit page.
@@ -278,16 +267,6 @@ exclude = [
   '^https://allthatsaas\.com/',
   '^https://www\.new-startups\.com/',
   '^https://crazyaboutstartups\.com/',
-  # 2026-10-08: TEMPORARY. AI Respo (an existing row) failed both link checks of PR #99 with 403, though it passed the link check on
-  # main at 19:47 UTC the same day. From here its submit page also answers 403 to every request, browser user agent included, while
-  # the response still carries the submit page and the homepage answers 200: a new block on that page, not a removed site. Excluded so
-  # unrelated PRs can merge. Recheck 2026-10-09: remove this line when lychee gets a clean 2xx. This does not mean the site is healthy.
-  '^https://airespo\.com/submit-tool/',
-  # 2026-10-08: TEMPORARY. Aura++ (an existing row) failed the third link check of PR #99 and its re-run with "SSL certificate not
-  # trusted", after passing the first two. From here both of its addresses serve a complete, valid chain (Let's Encrypt YR2, then Root YR
-  # cross-signed by ISRG Root X1) and the submit page answers 200. Excluded so unrelated PRs can merge. Recheck 2026-10-09: remove this
-  # line when lychee gets a clean 2xx. This does not mean the site is healthy.
-  '^https://auraplusplus\.com/',
   # 2026-10-08: Thingtesting answered GitHub's runners with 403 on the first link check of PR #100, while its submit page answered 200
   # from here the same morning, to a browser user agent and a non-browser one, and it loaded normally in a browser that morning, when we
   # read its rules.
@@ -307,16 +286,6 @@ exclude = [
   '^https://www\.startupvalley\.news/apply-now',
   '^https://saasgpters\.com/',
   '^https://www\.webwiki\.com/',
-  # 2026-10-08: TEMPORARY. StrictSeal (an existing row) answered GitHub's runners with 503 on the second link check of PR #100 and its
-  # re-run, and on the link check on main at 20:40 UTC after PR #99 merged, though it passed the first check of PR #100. From here its
-  # submit page answers 307 to its sign-in page, which answers 200. Excluded so unrelated PRs can merge. Recheck 2026-10-09: remove this
-  # line when lychee gets a clean 2xx. This does not mean the site is healthy.
-  '^https://strictseal\.com/',
-  # 2026-10-08: TEMPORARY. Simple Lister (an existing row) failed the re-run of the second link check of PR #100 and the third check with
-  # "TLS handshake failed", after passing the first two. From here both of its addresses failed the same morning too (one reset the TLS
-  # connection, the other timed out). Excluded so unrelated PRs can merge. Recheck 2026-10-09: remove this line when lychee gets a clean
-  # 2xx. This does not mean the site is healthy.
-  '^https://simplelister\.com/',
   # 2026-10-08: intentionally linked under Reported submission problems. Ready SaaS Go (an existing row) answered GitHub's
   # runners with Cloudflare's 522 on the third link check of PR #100, after passing the earlier ones, and it answers 522 from here too.
   # This does not mean the site is healthy.
@@ -339,20 +308,32 @@ exclude = [
   # page and 403. The owner session's browser loaded it that morning: the domain now serves an online casino affiliate page. This does
   # not mean the site is healthy.
   '^https://(www\.)?topionetworks\.com/',
-  # 2026-10-14, temporary: EarlyHunt and MakerHunt (existing rows) both answered 503 on both link checks of PR #106. From here, and in
-  # the SubmitMyStartup browser, both /submit pages show only "no available server" (the same host, with nothing behind it). Both
-  # loaded when we tried them on 2026-10-04. Recheck on 2026-10-21: if they are still down, their rows move to Reported submission
-  # problems as dead and these lines go; if they are back, these lines go. This does not mean the sites are healthy.
-  '^https://earlyhunt\.com/',
-  '^https://makerhunt\.io/',
   # 2026-10-15: intentionally linked under Reported submission problems (found dead 2026-10-14); connection refused from CI and from Sydney.
   '^https://unboxingstartups\.com/',
-  # 2026-10-15: the submit page redirects to itself (301 to the same URL), from CI and from Sydney. Recheck on 2026-10-22: if it still loops, the
-  # row moves to Reported submission problems and this line goes; if it loads, this line goes. This does not mean the site is healthy.
-  '^https://theaisurf\.com/submit-listing/$',
-  # 2026-10-15: the submit form timed out from CI (twice, on PR #110) and from Sydney. Recheck on 2026-10-22: if it still times out, the
-  # row moves to Reported submission problems and this line goes; if it loads, this line goes. This does not mean the site is healthy.
-  '^https://where2go\.com/binn/su\.w2g',
   # 2026-10-15: CI gets 521 then 403 from SaaSList while a request from Sydney gets 200 (a bot wall, as with Betabound). Recheck periodically.
   '^https://saaslist\.com/$',
+  # 2026-10-19: CI gets Cloudflare 522 from AI138's submit page on all three link checks of PR #124, while a request from Sydney gets 200.
+  # Recheck periodically.
+  '^https://www\.ai138\.com/submit$',
+  # 2026-10-24: intentionally linked under Reported submission problems. On GitHub's runners, from Sydney and in a browser: AIBestTop
+  # answers Cloudflare's 523 (since 2026-10-19), Indie Folio's Vercel deployment is "paused by the owner" (503, since 2026-10-19), Simple
+  # Lister closes every TLS connection (since 2026-10-08), Where2Go's submit form answers Cloudflare's 520 or times out (since 2026-10-15),
+  # and The AI Generation shows WordPress's critical error page (500, since 2026-10-19). This does not mean the sites are healthy.
+  '^https://aibesttop\.com/',
+  '^https://indiefol\.io/',
+  '^https://simplelister\.com/',
+  '^https://where2go\.com/binn/su\.w2g',
+  '^https://www\.theaigeneration\.com/',
+  # 2026-10-24: bot walls. AI Tools Explorer and ITQlick answer GitHub's runners and non-browser requests from Sydney with Cloudflare's
+  # "Just a moment..." challenge (403), and WebDesignerNews and Index by Dodo Payments with Vercel's security checkpoint (429), while
+  # all four pages loaded normally in a browser on 2026-10-24. Index by Dodo Payments' line replaces its temporary one of 2026-10-08.
+  # Recheck periodically. This does not mean the sites are healthy.
+  '^https://aitoolsexplorer\.com/',
+  '^https://www\.itqlick\.com/',
+  '^https://www\.webdesignernews\.com/',
+  '^https://index\.dodopayments\.com/',
+  # 2026-10-24, temporary: PromoteProject (an existing row, published 2026-10-04) timed out on the link check on main, from Sydney, and
+  # in a browser on 2026-10-24. Recheck on 2026-10-31: still down, its row moves to Reported submission problems and this
+  # line becomes a Reported one; back, this line goes. This does not mean the site is healthy.
+  '^https://www\.promoteproject\.com/',
 ]
